@@ -1,0 +1,5 @@
+Django==4.0.6
+djangorestframework==3.13.1
+drf_spectacular==0.22.1
+ibmcloudenv==0.2.1
+selenium==4.3.0
