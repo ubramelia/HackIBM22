@@ -6,8 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Results - The SMSpace</title>
+        <title>Message Center - The SMSpace</title>
         <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="icon" type="image/x-icon" href="assets/img/SMSpaceLogo.png" />
         <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.24.1/feather.min.js" crossorigin="anonymous"></script>
@@ -23,7 +24,7 @@
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav ms-auto me-lg-5">
-                                    <li class="nav-item"><a class="nav-link" href="the-team.html">About Us</a></li>                                    
+                                    <li class="nav-item"><a class="nav-link" href="index.html">About Us</a></li>                                    
                                     <li class="nav-item dropdown dropdown-xl no-caret">
                                         <a class="nav-link dropdown-toggle" id="navbarDropdownPages" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Education Hub
@@ -91,7 +92,7 @@
                                                     <div class="d-flex h-100 w-100 align-items-center justify-content-center">
                                                         <div class="text-white text-center z-1">
                                                             <div class="mb-3">Welcome to our Job Hub <br>- now let's get you a job! <br><br>Do you have a specific role in mind?</div>
-                                                            <a class="btn btn-white btn-sm text-primary fw-500" href="index.html">Yup! Let's Search for Jobs</a>
+                                                            <a class="btn btn-white btn-sm text-primary fw-500" href="find-job.html">Yup! Let's Search for Jobs</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -178,106 +179,152 @@
                             <div class="container px-5 text-center">
                                 <div class="row gx-5 justify-content-center">
                                     <div class="col-lg-8">
-                                        <h1 class="page-header-ui-title mb-3">Jobs for You</h1>
-                                        <p class="page-header-ui-text">The job listings below are within your prefferred roles & you meet all of the required specifications to apply for them.</p>
+                                        <h1 class="page-header-ui-title mb-3">Message Center</h1>
+                                        <p class="page-header-ui-text">View all past & current channels of conversation you've had with The SMSpace Chatbot.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="svg-border-rounded text-white">
+                        <div class="svg-border-rounded text-light">
                             <!-- Rounded SVG Border-->
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
                         </div>
                     </header>
-                    <section class="bg-white py-10">
+                    <section class="bg-light pt-10">
                         <div class="container px-5">
-                            <div class="row gx-5 justify-content-center">
-                                <div class="col-lg-10">
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h2 class="mb-0">Administration</h2>
-                                        <div class="badge bg-primary-soft text-primary badge-marketing">3 Openings</div>
+                            <div class="input-group input-group-lg mb-5">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Type</button>
+                                <div class="dropdown-menu animated--fade-in-up">
+                                    <a class="dropdown-item" href="#!">Course</a>
+                                    <a class="dropdown-item" href="#!">Quiz</a>
+                                    <a class="dropdown-item" href="#!">Job Alert</a>
+                                    <a class="dropdown-item" href="#!">Study Buddy</a>
+                                </div>
+                                <input class="form-control" type="text" aria-label="Text input with dropdown button" placeholder="Search for an interaction type..." />
+                            </div>
+                            <div class="row gx-5">
+                                <div class="col-lg-4 col-xl-3 mb-5">
+                                    <div class="card">
+                                        <div class="list-group list-group-flush small">
+                                            <a class="list-group-item list-group-item-action p-3" href="#!">
+                                                <i class="fas fa-plus fa-fw me-2 text-gray-400"></i>
+                                                Start new channel
+                                            </a>
+                                            <a class="list-group-item list-group-item-action p-3" href="#!">
+                                                <i class="fas fa-file-alt fa-fw me-2 text-gray-400"></i>
+                                                View Open Channels
+                                            </a>
+                                            <a class="list-group-item list-group-item-action p-3" href="#!">
+                                                <i class="fas fa-archive fa-fw me-2 text-gray-400"></i>
+                                                View Closed Channels
+                                            </a>
+                                            <a class="list-group-item list-group-item-action p-3" href="#!">
+                                                <i class="fas fa-star fa-fw me-2 text-gray-400"></i>
+                                                View Starred Channels
+                                            </a>
+                                            <a class="list-group-item list-group-item-action p-3" href="#!">
+                                                <i class="far fa-handshake fa-fw me-2 text-gray-400"></i>
+                                                Watson Services
+                                            </a>
+                                        </div>
                                     </div>
-                                    <hr class="mb-0" />
-                                    <ul class="list-group list-group-flush list-group-careers">
-                                        <li class="list-group-item">
-                                            <a href="#!">Senior Manager, Risk Management</a>
-                                            <div class="small">Remote - US (San Francisco, CA)</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <a href="#!">Operations Manager</a>
-                                            <div class="small">San Francisco, CA (HQ)</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <a href="#!">Administrative Assistant</a>
-                                            <div class="small">Dallas, TX</div>
-                                        </li>
-                                    </ul>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h2 class="mb-0">Engineering</h2>
-                                        <div class="badge bg-primary-soft text-primary badge-marketing">5 Openings</div>
+                                </div>
+                                <div class="col-lg-8 col-xl-9">
+                                    <div class="card mb-3">
+                                        <div class="list-group list-group-flush">
+                                            <a class="list-group-item list-group-item-action py-4" href="#!">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="me-4 d-flex">
+                                                        <div class="icon-stack icon-stack bg-green-soft text-green flex-shrink-0 me-4"><i data-feather="check"></i></div>
+                                                        <div>
+                                                            <h6>Case #290225</h6>
+                                                            <p class="card-text">Thank you for completing the "Intro to Python" course. Your skill will be added to your profile in under 24 hours.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small text-gray-400 flex-shrink-0 text-end">
+                                                        12:13 PM
+                                                        <br />
+                                                        <div class="badge bg-green-soft rounded-pill text-green">Completed</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="list-group-item list-group-item-action py-4" href="#!">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="me-4 d-flex">
+                                                        <div class="icon-stack icon-stack bg-red-soft text-red flex-shrink-0 me-4"><i data-feather="x"></i></div>
+                                                        <div>
+                                                            <h6>Case #290234</h6>
+                                                            <p class="card-text">You have successfully ended the course. If you'd like to reopen it at any time, reply to this message.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small text-gray-400 flex-shrink-0 text-end">
+                                                        10:26 PM
+                                                        <br />
+                                                        <div class="badge bg-red-soft rounded-pill text-red">Ended</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="list-group-item list-group-item-action py-4" href="#!">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="me-4 d-flex">
+                                                        <div class="icon-stack icon-stack bg-green-soft text-green flex-shrink-0 me-4"><i data-feather="check"></i></div>
+                                                        <div>
+                                                            <h6>Case #290194</h6>
+                                                            <p class="card-text">Thank you for completing the "Intro to Python" course. Your skill will be added to your profile in under 24 hours..</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small text-gray-400 flex-shrink-0 text-end">
+                                                        Monday
+                                                        <br />
+                                                        <div class="badge bg-green-soft rounded-pill text-green">Completed</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="list-group-item list-group-item-action py-4" href="#!">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="me-4 d-flex">
+                                                        <div class="icon-stack icon-stack bg-yellow-soft text-yellow flex-shrink-0 me-4"><i data-feather="file-text"></i></div>
+                                                        <div>
+                                                            <h6>Case #290127</h6>
+                                                            <p class="card-text">You have been assigned a Study Buddy. Jamie is also taking the "Hello World" course. You can text him by replying to this message. If you'd like to end this conversation, reply "STOP".</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small text-gray-400 flex-shrink-0 text-end">
+                                                        2 weeks ago
+                                                        <br />
+                                                        <div class="badge bg-yellow-soft rounded-pill text-yellow">In Progress</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="list-group-item list-group-item-action py-4" href="#!">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="me-4 d-flex">
+                                                        <div class="icon-stack icon-stack bg-yellow-soft text-yellow flex-shrink-0 me-4"><i data-feather="file-text"></i></div>
+                                                        <div>
+                                                            <h6>Case #290078</h6>
+                                                            <p class="card-text">You have paused the course "Building a website in HTML". In order to resume the lesson, please reply "RESUME". If you'd like to end the session, please reply "END".</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="small text-gray-400 flex-shrink-0 text-end">
+                                                        2 weeks ago
+                                                        <br />
+                                                        <div class="badge bg-yellow-soft rounded-pill text-yellow">In Progress</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a class="list-group-item list-group-item-action py-4" href="#!"><div class="text-center small">View Archived Conversations</div></a>
+                                        </div>
                                     </div>
-                                    <hr class="mb-0" />
-                                    <ul class="list-group list-group-flush list-group-careers">
-                                        <li class="list-group-item">
-                                            <a href="#!">Senior Software Engineer</a>
-                                            <div class="small">Remote - US / Canada</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <a href="#!">Software Engineer</a>
-                                            <div class="small">Remote - Global</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <a href="#!">Data Scientist</a>
-                                            <div class="small">Remote - Global</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <a href="#!">Front End Engineer</a>
-                                            <div class="small">San Francisco, CA (HQ)</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <a href="#!">Technical Director</a>
-                                            <div class="small">San Francisco, CA (HQ)</div>
-                                        </li>
-                                    </ul>
-                                    <div class="d-flex align-items-center justify-content-between">
-                                        <h2 class="mb-0">Sales</h2>
-                                        <div class="badge bg-primary-soft text-primary badge-marketing">4 Openings</div>
+                                    <div class="text-end mb-5">
+                                        <a class="btn btn btn-primary-soft text-primary fw-500" href="#!">
+                                            <i class="fas fa-file-pdf me-1"></i>
+                                            Download conversation history
+                                        </a>
                                     </div>
-                                    <hr class="mb-0" />
-                                    <ul class="list-group list-group-flush list-group-careers">
-                                        <li class="list-group-item">
-                                            <a href="#!">Sales Support Coordinator</a>
-                                            <div class="small">Remote - US (San Francisco, CA)</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <a href="#!">Senior Sales Representative</a>
-                                            <div class="small">Remove - US Northeast</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <a href="#!">Paid Search Specialist</a>
-                                            <div class="small">Remote - Global</div>
-                                        </li>
-                                        <li class="list-group-item">
-                                            <a href="#!">Junior Sales Representative</a>
-                                            <div class="small">San Francisco, CA (HQ)</div>
-                                        </li>
-                                    </ul>
-                                    <h4 class="mb-4">
-                                        <div class="icon-stack bg-primary text-white me-2"><i data-feather="smile"></i></div>
-                                        Celebrate the Win.
-                                    </h4>
-                                    <p class="mb-5">You've learned enough to be qualified for 12 jobs within your chosen roles - That's amazing!</p>
-                                    <h4 class="mb-4">
-                                        <div class="icon-stack bg-primary text-white me-2"><i data-feather="trending-up"></i></div>
-                                        Keep growing.
-                                    </h4>
-                                    <p>Just because you already qualify to apply for these jobs, doesn't mean you should stop learning! Continuing to learn more skills will give you an edge over other applicants.</p>
-                                    <hr class="my-5" />
-                                    <div class="card bg-light shadow-none">
-                                        <div class="card-body text-center p-5">
-                                            <h2>Internships</h2>
-                                            <p class="lead mb-4">Are these roles offering in inconvenient areas? <br>Please add your preferred locations to your profile so that we can tailor your job listings to you! </p>
-                                            <a class="btn btn-primary fw-500" href="#!">Go To Profile</a>
+                                    <div class="card z-1">
+                                        <div class="card-body text-center py-5">
+                                            <h2 class="mb-3">We're here to help</h2>
+                                            <a class="btn btn-primary fw-500" href="#!">Talk to Chatbot</a>
                                         </div>
                                     </div>
                                 </div>
@@ -360,5 +407,13 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                disable: 'mobile',
+                duration: 600,
+                once: true,
+            });
+        </script>
     </body>
 </html>
