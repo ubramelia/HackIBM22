@@ -54,5 +54,9 @@ def results(command):
         result = fetch_assoc(command)
     return ret  # Ditch this line if you choose to use a generator.
 
+conn=connectToDB2()
+
+print("Printing fetched data..")
+print(fetchData(conn))
 
 
