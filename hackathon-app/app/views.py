@@ -10,10 +10,12 @@ import requests
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.response import Response
 from urllib.parse import unquote
+import server.database.database as db
 import sys
-
-
 import os
+
+
+
 
 
 # #twilio creds- need to remove before leaving on git
@@ -30,6 +32,7 @@ import os
      )
 @api_view(['GET','POST'])
 @csrf_exempt
+
 
 def printt(thing):
     resp = thing
@@ -103,3 +106,8 @@ def handler404(request):
 
 def handler500(request):
     return render(request, '500.html', status=500)
+
+
+def retrieveData():
+    conn=db.dataseconnectToDB2()
+    return(db.fetchData(conn))
