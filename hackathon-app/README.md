@@ -141,6 +141,11 @@ To set up the project ensure you are running in a virtual environment so that th
 3. Use `source venv/bin/activate` to activate your virtual environment
 4. Do `pip3 install pip-tools` to install the pip-tools dependency manager (it uses pip by default, but makes it slightly better)
 
+
+instal dotenv
+```
+pip3 install python-dotenv
+```
 Running Django applications has been simplified with a `manage.py` file to avoid dealing with configuring environment variables to run your app. From your project root, you can download the project dependencies with:
 
 ```bash
