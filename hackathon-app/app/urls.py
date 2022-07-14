@@ -10,4 +10,5 @@ urlpatterns = [
                path('docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
                path('404', views.handler404, name='404'),
                path('500', views.handler500, name='500'),
+               path('sms/', views.sms, name='sms'),
                ]
