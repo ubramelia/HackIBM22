@@ -120,3 +120,58 @@ ibmcloud dev debug
 This sample application is licensed under the Apache License, Version 2. Separate third-party code objects invoked within this code pattern are licensed by their respective providers pursuant to their own separate licenses. Contributions are subject to the [Developer Certificate of Origin, Version 1.1](https://developercertificate.org/) and the [Apache License, Version 2](https://www.apache.org/licenses/LICENSE-2.0.txt).
 
 [Apache License FAQ](https://www.apache.org/foundation/license-faq.html#WhatDoesItMEAN)
+
+### DB2 Connection
+* (MacOS) Install [Homebrew](https://brew.sh/)
+* (Windows, Linux) Install [Python](https://www.python.org/downloads/)
+* (MacOS) Install Python via Homebrew
+  * `brew install python@3.9 # (x being the minor version)`
+  * `echo "alias python3='/usr/local/bin/python3.9'" >> ~/.bashrc`
+  * `echo "alias pip3='/usr/local/bin/pip3.9'" >> ~/.bashrc`
+  * `echo 'export PATH="/usr/local/opt/python@3.9/bin:$PATH"' >> ~/.bashrc`
+  * `source ~/.bashrc`
+If this does not work you can also try unlink python3 and link to python3.9.
+
+#### Setting up your local environment
+To set up the project ensure you are running in a virtual environment so that the project is in a sandbox and not impacted by any other python dependencies
+1. Open the project folder in your terminal
+2. Ensure you're using the correct python version by running `python3 --version && which python3`
+3. Install the IBM DB2 package: `pip3 install ibm-db`
+2. Run `python3 -m venv venv` to create your virtual environment
+3. Use `source venv/bin/activate` to activate your virtual environment
+4. Do `pip3 install pip-tools` to install the pip-tools dependency manager (it uses pip by default, but makes it slightly better)
+
+
+instal dotenv
+```
+pip3 install python-dotenv
+```
+Running Django applications has been simplified with a `manage.py` file to avoid dealing with configuring environment variables to run your app. From your project root, you can download the project dependencies with:
+
+```bash
+pip-tools sync requirements.txt #To install production packages
+pip-tools sync requirements.dev #To install development packages
+```
+
+Then, activate this app's virtualenv:
+
+```bash
+source venv/bin/activate
+```
+
+(MacOS Only) If you're on MacOS, you need to run the `fix-db2-mac.sh` script to ensure that the `ibm-db2` package works for you
+
+```bash
+sh fix-db2-mac.sh
+```
+
+Test db2 connection
+```
+python3 db2_connect.py
+```
+
+If it still doesn't work, try fixing dyld path
+```
+export DYLD_LIBRARY_PATH=venv/lib/python3.9/site-packages/clidriver/lib:$DYLD_LIBRARY_PATH
+```
+

@@ -3,6 +3,7 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 from . import views
 
 
+
 urlpatterns = [
                path('', views.index, name='index'),
                path('health/', views.health, name='health'),
