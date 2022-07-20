@@ -65,7 +65,7 @@ def sms(request):
 
     print(1, incoming)
     #resp = "here"
-    client = Client('AC2a4627cb1bb9c56a67ce66d71f6d5dd7', '18eda96e36fcc068058bd91bde39e841')
+    client = Client('$$$$$$$$$$$$$$$$$$$$$$', '$$$$$$$$$$$$$$$$$$$$$$$$')
     if incoming[0] == ">" or incoming[0] == "<":
         file = open('output.txt', 'w')
         sys.stdout = file
