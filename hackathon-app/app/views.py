@@ -36,8 +36,6 @@ import os
 
 def printt(thing):
     resp = thing
-    #client = Client('AC2a4627cb1bb9c56a67ce66d71f6d5dd7', '18eda96e36fcc068058bd91bde39e841')
-    #message = client.messages.create(body=resp,from_='+19894761292',to=to_number)
 
 def parse_req(req):
     dict = {}
